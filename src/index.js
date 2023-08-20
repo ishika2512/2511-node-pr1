@@ -1,33 +1,28 @@
 const express = require("express");
 const http = require("http");
 const { connectDB } = require("./db/dbConnection");
-const routes = require("./routes/v1");
+const routes = require("./routes");
 const config = require("./config/config");
+const bodyParser = require("body-parser");
 
-const app=express();
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.use("/v1", routes);
 
-connectDB();
+app.use((req, res, next) => {
+    next(new Error("Route not found!"));
+});
 
-// // create server by using express
-// const fs=require("fs");
+/** Database connection */
+connectDB()
 
-// app.get('/',function(req,res){
-//     fs.readFile('indexx.html',function(err,data){
-//         res.writeHead(200,{'content-type':'test.html'});
-//         res.write(data);
-//         res.end();
-//     });
-// });
-// app.listen(4040);
+const server = http.createServer(app);
 
-// create server by using http
-var fs = require("fs");
-http.createServer(function (req, res) {
-    fs.readFile('indexx.html', function (err, data) {
-        res.writeHead(200, { 'content-type': 'test.html' });
-        res.write(data);
-        return res.end();
-    })
-}).listen(4040);
+server.listen(config.port, () => {
+    console.log("server is started");
+});

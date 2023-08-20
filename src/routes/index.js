@@ -1,7 +1,7 @@
-const express = trquire("express");
-const userRoute =require("./user.route");
+const express = require("express");
+const bookRoute = require("./book.route");
 
 const router = express.Router();
-router.use("/user", userRoute);
 
-module.exports=router;
+router.use("/book", bookRoute);
+module.exports = router;
