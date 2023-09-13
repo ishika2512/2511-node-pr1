@@ -3,8 +3,9 @@ const Joi = require("joi");
 // create-review
 const createreview = {
     body: Joi.object().keys({
-        review_name: Joi.string().required().trim(),
-        review_desc: Joi.string().required().trim(),
+        user_id: Joi.number().required(),
+        movie_id: Joi.number().required(),
+        review_text: Joi.string().required().trim(),
     }),
 };
 

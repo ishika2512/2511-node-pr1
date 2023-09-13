@@ -3,22 +3,19 @@ const bookingSchema = new mongoose.Schema(
     {
         booking_id:{
             type: Number,
-        },
-        user_id:{
-            type: Number,
-        },
-        show_id:{
-            type: Number,
+            default: 0,
         },
         no_of_ticket:{
             type: Number,
+            default: 0,
         },
         total_amount:{
             type: Number,
+            default: 0,
         },
         show_date:{
             type: Date,
-            default: Date.new(),
+            default: Date.now(),
         },
         is_active: {
             type: Boolean,

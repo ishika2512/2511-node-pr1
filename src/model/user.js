@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema(
     {
-        user_id:{
-            type: Number,
-        },
         user_name:{
             type: String,
             trim: true,
@@ -18,6 +15,7 @@ const userSchema = new mongoose.Schema(
         },
         mobile_no:{
             type: Number,
+            default: 0,
         },
         payment_info:{
             type: String,

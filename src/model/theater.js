@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const theaterSchema = new mongoose.Schema(
     {
-        theater_id:{
-            type: Number,
-        },
         theater_name:{
             type: String,
             trim: true,
@@ -14,9 +11,11 @@ const theaterSchema = new mongoose.Schema(
         },
         contact_info:{
             type: Number,
+            default: 0,
         },
-        theater_location:{
+        no_of_seat:{
             type: Number,
+            default: 0,
         },
         is_active: {
             type: Boolean,

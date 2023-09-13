@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const showSchema = new mongoose.Schema(
     {
-        show_id:{
-            type: Number,
-        },
         movie_id:{
             type: String,
         },
@@ -12,10 +9,11 @@ const showSchema = new mongoose.Schema(
         },
         show_date:{
             type: Date,
-            default: Date.new(),
+            default: Date.now(),
         },
         ticket_price:{
             type: Number,
+            default: 0,
         },
         booking_status:{
             type: String,
