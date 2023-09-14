@@ -1,14 +1,13 @@
 const mongoose = require("mongoose");
 const bookingSchema = new mongoose.Schema(
     {
-        booking_id:{
-            type: Number,
+        user:{
+            type:mongoose.Types.ObjectId,
+            ref:"user"
         },
-        user_id:{
-            type: Number,
-        },
-        show_id:{
-            type: Number,
+        show:{
+            type:mongoose.Types.ObjectId,
+            ref:"show"
         },
         no_of_ticket:{
             type: Number,
@@ -16,9 +15,9 @@ const bookingSchema = new mongoose.Schema(
         total_amount:{
             type: Number,
         },
-        show_date:{
+        booking_date:{
             type: Date,
-            default: Date.new(),
+            default: Date.now(),
         },
         is_active: {
             type: Boolean,

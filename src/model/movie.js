@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const movieSchema = new mongoose.Schema(
     {
-        movie_id:{
-            type: Number,
-        },
         title:{
             type: String,
             trim: true,
@@ -14,7 +11,7 @@ const movieSchema = new mongoose.Schema(
         },
         release_date:{
             type: Date,
-            default: Date.new(),
+            default: Date.now(),
         },
         language:{
             type: String,

@@ -3,8 +3,10 @@ const Joi = require("joi");
 // create-movie
 const createmovie = {
     body: Joi.object().keys({
-        movie_name: Joi.string().required().trim(),
-        movie_desc: Joi.string().required().trim(),
+        title: Joi.string().required().trim(),
+        description: Joi.string().required().trim(),
+        release_date: Joi.date().required(),
+        language: Joi.string().required().trim(),
     }),
 };
 

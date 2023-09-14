@@ -1,14 +1,13 @@
 const mongoose = require("mongoose");
 const reviewSchema = new mongoose.Schema(
     {
-        review_id:{
-            type: Number,
+        user:{
+            type:mongoose.Types.ObjectId,
+            ref:"user"
         },
-        user_id:{
-            type: Number,
-        },
-        movie_id:{
-            type: Number,
+        movie:{
+            type:mongoose.Types.ObjectId,
+            ref:"movie"
         },
         review_text:{
             type: String,
