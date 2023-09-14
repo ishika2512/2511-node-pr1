@@ -11,9 +11,11 @@ const theaterSchema = new mongoose.Schema(
         },
         contact_info:{
             type: Number,
+            default: 0,
         },
         no_of_seat:{
             type: Number,
+            default: 0,
         },
         is_active: {
             type: Boolean,
