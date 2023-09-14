@@ -10,7 +10,9 @@ const getbookingByName = async (booking_name) => {
 };
 
 const getbookingList = async (filter, options) => {
-    return booking.find();
+    return booking.find()
+    .populate("user")
+    .populate("show");
 };
 
 const deletebooking = async (bookingId) => {
