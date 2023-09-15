@@ -10,7 +10,9 @@ const getreviewByName = async (review_name) => {
 };
 
 const getreviewList = async (filter, options) => {
-    return review.find();
+    return review.find({ $or: [{ is_active: false }] })
+    .populate("user")
+    .populate("movie")
 };
 
 const deletereview = async (reviewId) => {

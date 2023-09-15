@@ -10,7 +10,7 @@ const getuserByName = async (user_name) => {
 };
 
 const getuserList = async (filter, options) => {
-    return user.find();
+    return user.find({ $or: [{ is_active: false }] });
 };
 
 const deleteuser = async (userId) => {

@@ -10,7 +10,7 @@ const getCategoryByName = async (category_name) => {
 };
 
 const getCategoryList = async (filter, options) => {
-    return category.find();
+    return category.find({ $or: [{ is_active: false }] });
 };
 
 const deleteCategory = async (categoryId) => {

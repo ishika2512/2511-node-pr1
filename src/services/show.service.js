@@ -10,7 +10,9 @@ const getshowByName = async (show_name) => {
 };
 
 const getshowList = async (filter, options) => {
-    return show.find();
+    return show.find({ $or: [{ is_active: false }] })
+    .populate("movie")
+    .populate("theater")
 };
 
 const deleteshow = async (showId) => {

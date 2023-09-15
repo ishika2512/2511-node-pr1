@@ -10,9 +10,9 @@ const getbookingByName = async (booking_name) => {
 };
 
 const getbookingList = async (filter, options) => {
-    return booking.find()
-    .populate("user")
-    .populate("show");
+    return booking.find({ $or: [{ is_active: false }] })
+        .populate("user")
+        .populate("show");
 };
 
 const deletebooking = async (bookingId) => {
