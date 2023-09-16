@@ -23,8 +23,8 @@ const getbookingById = async (bookingId) => {
     return booking.findById(bookingId);
 };
 
-const updateDetails = async () => {
-    return booking.findByIdAndUpdate();
+const updateDetails = async (bookingId, updateBody) => {
+    return booking.findByIdAndUpdate(bookingId, {$set: updateBody});
 };
 
 module.exports = {

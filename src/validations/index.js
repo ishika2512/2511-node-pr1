@@ -1,4 +1,3 @@
-module.exports.categoryValidation = require("./category.validation");
 module.exports.bookingValidation = require("./booking.validation");
 module.exports.movieValidation = require("./movie.validation");
 module.exports.reviewValidation = require("./review.validation");

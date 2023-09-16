@@ -23,8 +23,8 @@ const getreviewById = async (reviewId) => {
     return review.findById(reviewId);
 };
 
-const updateDetails = async () => {
-    return review.findByIdAndUpdate();
+const updateDetails = async (reviewId, updateBody) => {
+    return review.findByIdAndUpdate(reviewId, {$set: updateBody});
 };
 
 module.exports = {

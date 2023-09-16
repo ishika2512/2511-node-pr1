@@ -21,8 +21,8 @@ const gettheaterById = async (theaterId) => {
     return theater.findById(theaterId);
 };
 
-const updateDetails = async () => {
-    return theater.findByIdAndUpdate();
+const updateDetails = async (theaterId, updateBody) => {
+    return theater.findByIdAndUpdate(theaterId, {$set: updateBody});
 };
 
 module.exports = {

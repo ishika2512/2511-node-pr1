@@ -1,4 +1,3 @@
-module.exports.categoryService = require("./category.service");
 module.exports.bookingService = require("./booking.service");
 module.exports.movieService = require("./movie.service");
 module.exports.reviewService = require("./review.service");

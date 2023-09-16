@@ -23,8 +23,8 @@ const getshowById = async (showId) => {
     return show.findById(showId);
 };
 
-const updateDetails = async () => {
-    return show.findByIdAndUpdate();
+const updateDetails = async (showId, updateBody) => {
+    return show.findByIdAndUpdate(showId, {$set: updateBody});
 };
 
 module.exports = {

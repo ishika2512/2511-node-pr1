@@ -1,6 +1,5 @@
 const express = require("express");
 
-const categoryRoute = require("./category.route");
 const userRoute = require("./user.route");
 const showRoute = require("./show.route");
 const bookingRoute = require("./booking.route");
@@ -10,7 +9,6 @@ const theaterRoute = require("./theater.route");
 
 const router = express.Router();
 
-router.use("/category",categoryRoute);
 router.use("/user",userRoute);
 router.use("/show",showRoute);
 router.use("/booking",bookingRoute);

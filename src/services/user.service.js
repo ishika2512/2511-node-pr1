@@ -21,8 +21,8 @@ const getuserById = async (userId) => {
     return user.findById(userId);
 };
 
-const updateDetails = async () => {
-    return user.findByIdAndUpdate();
+const updateDetails = async (reviewId, updateBody) => {
+    return user.findByIdAndUpdate(reviewId, {$set: updateBody});
 };
 
 module.exports = {

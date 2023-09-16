@@ -21,8 +21,8 @@ const getmovieById = async (movieId) => {
     return movie.findById(movieId);
 };
 
-const updateDetails = async () => {
-    return movie.findByIdAndUpdate();
+const updateDetails = async (movieId, updateBody) => {
+    return movie.findByIdAndUpdate(movieId, {$set: updateBody});
 };
 
 module.exports = {
