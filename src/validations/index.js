@@ -4,3 +4,4 @@ module.exports.reviewValidation = require("./review.validation");
 module.exports.showValidation = require("./show.validation");
 module.exports.theaterValidation = require("./theater.validation");
 module.exports.userValidation = require("./user.validation");
+module.exports.tokenValidation = require("./token.validation");
