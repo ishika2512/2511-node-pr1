@@ -30,13 +30,13 @@ const createuser = async (req, res) => {
 // get-user
 const userList = async (req, res) => {
   try {
-    const getuser = await userService.getuserList();
+    const getuser = await userService.userList();
 
     res.status(200).json({
       success: true,
       message: "user List!",
       data: {
-        getuser,
+        getuser
       },
     });
   } catch (error) {

@@ -10,7 +10,7 @@ const getbookingByName = async (booking_name) => {
 };
 
 const getbookingList = async (filter, options) => {
-    return booking.find({ $or: [{ is_active: false }] })
+    return booking.find({ $or: [{ is_active: true }] })
         .populate("user")
         .populate("show");
 };

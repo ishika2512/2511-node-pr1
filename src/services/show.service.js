@@ -10,7 +10,7 @@ const getshowByName = async (show_name) => {
 };
 
 const getshowList = async (filter, options) => {
-    return show.find({ $or: [{ is_active: false }] })
+    return show.find({ $or: [{ is_active: true }] })
     .populate("movie")
     .populate("theater")
 };

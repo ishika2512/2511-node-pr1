@@ -5,12 +5,12 @@ const createuser = async (reqBody) => {
     return user.create(reqBody);
 };
 
-const getuserByName = async (user_name) => {
-    return user.findOne({ user_name });
+const userList = async (filter, options) => {
+    return user.find({ $or: [{ is_active: true }] });
 };
 
-const getuserList = async (filter, options) => {
-    return user.find({ $or: [{ is_active: false }] });
+const getuserByName = async (user_name) => {
+    return user.findOne({ user_name });
 };
 
 const deleteuser = async (userId) => {
@@ -28,7 +28,7 @@ const updateDetails = async (reviewId, updateBody) => {
 module.exports = {
     createuser,
     getuserByName,
-    getuserList,
+    userList,
     deleteuser,
     getuserById,
     updateDetails

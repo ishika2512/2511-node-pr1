@@ -10,7 +10,7 @@ const getmovieByName = async (movie_name) => {
 };
 
 const getmovieList = async (filter, options) => {
-    return movie.find({ $or: [{ is_active: false }] });
+    return movie.find();
 };
 
 const deletemovie = async (movieId) => {

@@ -10,7 +10,7 @@ const gettheaterByName = async (theater_name) => {
 };
 
 const gettheaterList = async (filter, options) => {
-    return theater.find({ $or: [{ is_active: false }] });
+    return theater.find({ $or: [{ is_active: true }] });
 };
 
 const deletetheater = async (theaterId) => {
