@@ -25,11 +25,16 @@ const updateDetails = async (reviewId, updateBody) => {
     return user.findByIdAndUpdate(reviewId, {$set: updateBody});
 };
 
+const getUserByEmail=async(email)=>{
+    return user.findOne({email});
+ };
+
 module.exports = {
     createuser,
     getuserByName,
     userList,
     deleteuser,
     getuserById,
-    updateDetails
+    updateDetails,
+    getUserByEmail
 };

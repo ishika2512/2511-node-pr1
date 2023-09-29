@@ -17,7 +17,7 @@ const envVarsSchema = Joi.object({
     EMAIL_FROM: Joi.string().description(
         "the from field in the email sent by the app"
     ),
-}).unknown();;
+}).unknown();
 
 const { value: envVars, error } = envVarsSchema
     .prefs({ errors: { label: "key" } })
