@@ -13,7 +13,7 @@ let transport = nodemailer.createTransport({
 //  Send mail
 const sendMail = async (to, subject, text) => {
   try {
-    return transport.sendMail({
+    return transport({
       from: config.email.from,
       to,
       subject,
