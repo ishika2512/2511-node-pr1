@@ -1,0 +1,11 @@
+module.exports.category = require("./category");
+module.exports.contact = require("./contact");
+module.exports.founder = require("./founder");
+module.exports.gallary = require("./gallary");
+module.exports.news = require("./news");
+module.exports.player = require("./player");
+module.exports.result = require("./result");
+module.exports.shedule = require("./result");
+module.exports.team = require("./team");
+module.exports.turnament = require("./turnament");
+module.exports.user = require("./user");
