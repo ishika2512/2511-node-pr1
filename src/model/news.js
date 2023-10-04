@@ -2,19 +2,19 @@ const mongoose = require ("mongoose")
 const newsSchema=new mongoose.Schema(
     {
         news_title:{
-            type: Date,
-            default: Date.now(),
-        },
-        publication_date:{
             type: String,
             trim: true,
+        },
+        publication_date:{
+            type: Date,
+            default: Date.now(),
         },
         content:{
             type: String,
             trim: true,
         },
         comment:{
-            type: Number,
+            type: String,
             trim: true,
         },
         is_active:{

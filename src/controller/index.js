@@ -1,0 +1,11 @@
+module.exports.categoryController = require("./category.validation");
+module.exports.contactController = require("./contact.validation");
+module.exports.founderController = require("./founder.validation");
+module.exports.gallaryController = require("./gallary.validation");
+module.exports.newsController = require("./news.validation");
+module.exports.playerController = require("./player.validation");
+module.exports.resultController = require("./result.validation");
+module.exports.sheduleController = require("./shedule.validation");
+module.exports.teamController = require("./team.validation");
+module.exports.turnamentController = require("./turnament.validation");
+module.exports.userController = require("./user.validation");

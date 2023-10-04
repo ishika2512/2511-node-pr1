@@ -5,7 +5,7 @@ const categorySchema=new mongoose.Schema(
             type: String,
             trim: true,
         },
-        last_desc:{
+        category_desc:{
             type: String,
             trim: true,
         },

@@ -5,7 +5,7 @@ const sheduleSchema=new mongoose.Schema(
             type: String,
             trim: true,
         },
-        schedule_date:{
+        shedule_date:{
             type: Date,
             default: Date.now(),
         },

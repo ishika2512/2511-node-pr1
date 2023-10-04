@@ -23,7 +23,6 @@ const teamSchema=new mongoose.Schema(
             type:mongoose.Types.ObjectId,
             ref:"player"
         },
-
         is_active:{
             type: Boolean,
             default: true,
