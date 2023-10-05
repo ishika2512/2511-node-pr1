@@ -1,4 +1,4 @@
-const { founderService } = require("../services");
+const { founderService } = require("../service");
 
 // create-founder
 const createfounder = async (req, res) => {

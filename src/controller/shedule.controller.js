@@ -1,4 +1,4 @@
-const { sheduleService } = require("../services");
+const { sheduleService } = require("../service");
 
 // create-shedule
 const createshedule = async (req, res) => {

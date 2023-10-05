@@ -1,13 +1,14 @@
-const { gallaryService } = require("../services");
+const { gallaryService } = require("../service");
 
 // create-gallary
 const creategallary = async (req, res) => {
   try {
     const reqBody = req.body;
 
-    const gallaryEx = await gallaryService.getgallaryByName(reqBody.gallary_name);
-    if (gallaryEx) {
-      throw new Error(`please add other gallary this ${gallaryEx.gallary_name} gallary already created.`);
+    if (req.file) {
+      reqBody.sport_img = req.file.filename;
+    } else {
+      throw new Error("image is required");
     }
 
     const gallary = await gallaryService.creategallary(reqBody);
@@ -116,7 +117,7 @@ const updategallary = async (req, res) => {
 
 module.exports = {
   creategallary,
-  gallaryList, 
+  gallaryList,
   deleteRecord,
   getgallaryDetails,
   updategallary

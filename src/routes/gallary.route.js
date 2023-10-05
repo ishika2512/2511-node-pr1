@@ -1,4 +1,5 @@
 const express = require("express");
+const { upload } = require("../middleware/upload")
 const { gallaryValidation } = require("../validation");
 const { gallaryController } = require("../controller");
 const validate = require("../middleware/validate");
@@ -7,6 +8,7 @@ const router = express.Router();
 // create gallary
 router.post(
     "/create-gallary",
+    upload.single("sport_img"),
     validate(gallaryValidation.creategallary),
     gallaryController.creategallary
 );

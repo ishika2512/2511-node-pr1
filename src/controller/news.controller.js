@@ -1,4 +1,4 @@
-const { newsService } = require("../services");
+const { newsService } = require("../service");
 
 // create-news
 const createnews = async (req, res) => {

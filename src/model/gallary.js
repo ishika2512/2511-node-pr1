@@ -1,4 +1,6 @@
 const mongoose = require ("mongoose")
+const config = require("../config/config")
+
 const gallarySchema=new mongoose.Schema(
     {
         image_name:{
@@ -9,7 +11,7 @@ const gallarySchema=new mongoose.Schema(
             type: String,
             trim: true,
         },
-        image:{
+        sport_img:{
             type: String,
             trim: true,
         },
@@ -20,7 +22,14 @@ const gallarySchema=new mongoose.Schema(
     },
     {
         timestamps: true,
-        versionkey: false,
+        versionKey: false,
+        toJSON: {
+            transform: function (doc, data) {
+                if (data?.sport_img) {
+                    data.sport_img = `${config.base_url}sport_img/${data.sport_img}`;
+                }
+            },
+        },
     }
 );
 const gallary = mongoose.model("gallary",gallarySchema);

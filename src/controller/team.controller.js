@@ -1,4 +1,4 @@
-const { teamService } = require("../services");
+const { teamService } = require("../service");
 
 // create-team
 const createteam = async (req, res) => {
