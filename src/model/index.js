@@ -9,3 +9,4 @@ module.exports.shedule = require("./result");
 module.exports.team = require("./team");
 module.exports.turnament = require("./turnament");
 module.exports.user = require("./user");
+module.exports.token = require("./token")

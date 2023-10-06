@@ -9,3 +9,4 @@ module.exports.sheduleService = require("./shedule.service");
 module.exports.teamService = require("./team.service");
 module.exports.turnamentService = require("./turnament.service");
 module.exports.userService = require("./user.service");
+module.exports.tokenService = require("./token.service");

@@ -9,3 +9,4 @@ module.exports.sheduleValidation = require("./shedule.validation");
 module.exports.teamValidation = require("./team.validation");
 module.exports.turnamentValidation = require("./turnament.validation");
 module.exports.userValidation = require("./user.validation");
+module.exports.tokenValidation = require("./token.validation")

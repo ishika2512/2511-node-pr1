@@ -10,7 +10,8 @@ const resultRoute = require("./result.route");
 const sheduleRoute = require("./shedule.route");
 const teamRoute = require("./team.route");
 const turnamentRoute = require("./turnament.route");
-const userRouter = require("./user.route")
+const userRouter = require("./user.route");
+const tokenRouter = require("./token.route")
 
 const router = express.Router();
 
@@ -25,5 +26,6 @@ router.use("/shedule",sheduleRoute);
 router.use("/team",teamRoute);
 router.use("/turnament",turnamentRoute);
 router.use("/user",userRouter);
+router.use("/token",tokenRouter);
 
 module.exports = router;

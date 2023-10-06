@@ -24,5 +24,5 @@ app.use("/v1", routes);
 const server = http.createServer(app);
 
 server.listen(config.port, () => {
-    console.log(`server is started`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 );
+    console.log(`server start ${config.port}`);
 });
