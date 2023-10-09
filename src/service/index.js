@@ -10,3 +10,4 @@ module.exports.teamService = require("./team.service");
 module.exports.turnamentService = require("./turnament.service");
 module.exports.userService = require("./user.service");
 module.exports.tokenService = require("./token.service");
+module.exports.emailService = require("./email.service");

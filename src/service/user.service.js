@@ -25,11 +25,16 @@ const updateDetails = async () => {
     return user.findByIdAndUpdate();
 };
 
+const getUserByEmail = async (email) => {
+    return user.findOne({ email });
+};
+
 module.exports = {
     createuser,
     getuserByName,
     getuserList,
     deleteuser,
     getuserById,
-    updateDetails
+    updateDetails,
+    getUserByEmail
 };
