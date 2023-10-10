@@ -30,4 +30,11 @@ router.delete(
     userController.deleteRecode
 );
 
+// send mail
+router.post(
+    "/send-mail",
+    validate(userValidation.sendMail),
+    userController.sendMail
+);
+
 module.exports = router;
